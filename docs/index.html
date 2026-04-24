@@ -1,38 +1,772 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="no">
 <head>
-    <meta charset="UTF-8" />
-    <title>Wayfarer Vestfold RC | Motorcycle Riding Club in Vestfold, Norway</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <meta name="description" content="Wayfarer Vestfold RC is a motorcycle riding club based in Vestfold, Norway. Join our community of passionate riders for scenic Sunday rides, events, and more!">
-    <meta name="keywords" content="Wayfarer Vestfold, Motorcycle Riding Club, RC, Vestfold Norway, Sunday Rides, Vestfold Motorcycle Community">
-    <meta name="author" content="Wayfarer Vestfold RC">
+<!-- Primary SEO -->
+<title>Wayfarer Vestfold RC — Cruiser-klubb i Vestfold</title>
+<meta name="description" content="Cruiser-klubb fra Vestfold, stiftet 2024. Søndagsturer på kryss og tvers, langturer og MC-prat døgnet rundt på Discord. Cruiser, tourer eller custom — alle merker velkomne. Ingen prøvetid, ingen rangorden."/>
+<meta name="keywords" content="Wayfarer Vestfold RC, cruiser-klubb, MC-klubb Vestfold, motorsykkelklubb Norge, Sandefjord MC, Discord motorsykkel, Harley, Indian, Triumph, Honda Shadow, søndagstur Vestfold"/>
+<meta name="author" content="Wayfarer Vestfold RC"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#e84b1c"/>
+<link rel="canonical" href="https://wayfarervestfoldrc.no/"/>
 
-    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v3.0.1/modern-normalize.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="icon" href="/favicon.ico">
+<!-- Favicon / app icon -->
+<link rel="icon" type="image/svg+xml" href="assets/wayfarer-badge.svg"/>
+<link rel="apple-touch-icon" href="assets/wayfarer-badge.svg"/>
 
-    <meta property="og:title" content="Wayfarer Vestfold RC | Motorcycle Riding Club in Vestfold, Norway">
-    <meta property="og:description" content="Join Wayfarer Vestfold RC, a vibrant motorcycle community enjoying scenic rides through Vestfold, Norway. No membership fees, open to all riders!">
-    <meta property="og:image" content="https://wayfarervestfoldrc.no/facebook.jpg">
-    <meta property="og:url" content="https://wayfarervestfoldrc.no"> 
-    <meta property="og:type" content="website">
-    
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="nb_NO"/>
+<meta property="og:site_name" content="Wayfarer Vestfold RC"/>
+<meta property="og:url" content="https://wayfarervestfoldrc.no/"/>
+<meta property="og:title" content="Wayfarer Vestfold RC — Åpne veier, felles kurs"/>
+<meta property="og:description" content="Cruiser-klubb fra Vestfold, stiftet 2024. Søndagsturer, langturer og MC-prat døgnet rundt på Discord. Klubbhuset er på Discord — kom innom, bli kjent, kjør med."/>
+<meta property="og:image" content="https://wayfarervestfoldrc.no/facebook.jpg"/>
+<meta property="og:image:alt" content="Wayfarer Vestfold RC — cruiser-klubb fra Vestfold"/>
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Wayfarer Vestfold RC — Åpne veier, felles kurs"/>
+<meta name="twitter:description" content="Cruiser-klubb fra Vestfold, stiftet 2024. Søndagsturer, langturer og MC-prat døgnet rundt på Discord."/>
+<meta name="twitter:image" content="https://wayfarervestfoldrc.no/facebook.jpg"/>
+
+<!-- Structured data (Schema.org) for richer search results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsClub",
+  "name": "Wayfarer Vestfold RC",
+  "alternateName": "Wayfarer Vestfold Riding Club",
+  "url": "https://wayfarervestfoldrc.no/",
+  "logo": "https://wayfarervestfoldrc.no/assets/wayfarer-badge.svg",
+  "image": "https://wayfarervestfoldrc.no/facebook.jpg",
+  "description": "Cruiser-klubb fra Vestfold, stiftet 2024. Søndagsturer, langturer og MC-prat døgnet rundt på Discord.",
+  "foundingDate": "2024",
+  "sport": "Motorcycling",
+  "slogan": "Åpne veier, felles kurs.",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Vestfold, Norge"
+  },
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Vestfold",
+      "addressCountry": "NO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 59.13,
+      "longitude": 10.25
+    }
+  },
+  "sameAs": [
+    "https://discord.com/invite/8Q58Z4Xnj3"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+  /* ------------------------------------------------------------------
+     Wayfarer Vestfold RC — Direction A · Rugged cinematic
+     Static implementation of wayfarer_handoff/project/Wayfarer Redesign.html
+  ------------------------------------------------------------------ */
+
+  :root{
+    --bg:#0f0f10;
+    --bg2:#16161a;
+    --ink:#ece7df;
+    --ink2:#b7b1a3;
+    --mute:#6b6559;
+    --gold:#e84b1c;        /* "gold" name kept from prototype; actual hue is a hot orange */
+    --line:rgba(236,231,223,0.14);
+
+    --f-display:'Bebas Neue', sans-serif;
+    --f-serif:'Playfair Display', serif;
+    --f-body:'Inter', sans-serif;
+    --f-mono:'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  /* The source prototype is locked to a 1400px artboard (viewport width=1400).
+     Cap the page at the same reference width so on wider monitors the design
+     stays at its intended proportions instead of stretching photos wider while
+     their row heights stay fixed. */
+  html{
+    background:#050506;
+  }
+  body{
+    max-width:1400px;
+    margin:0 auto;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  a{ color:inherit; }
+  img{ display:block; max-width:100%; }
+  ul{ margin:0; padding:0; list-style:none; }
+  /* Browsers ship `<figure>` with a default `margin: 1em 40px` — inside a grid
+     that pushes every photo card 40px off the section's gutter, so the gallery
+     row no longer aligns with the heading above it. Reset it. */
+  figure{ margin:0; }
+
+  /* Film grain overlay -------------------------------------------------*/
+  .grain{ position:relative; }
+  .grain::before{
+    content:""; position:absolute; inset:0; pointer-events:none; z-index:2;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.45 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity:.22; mix-blend-mode:overlay;
+  }
+
+  /* HERO ------------------------------------------------------------- */
+  .hero{
+    position:relative; height:980px; overflow:hidden;
+    background:radial-gradient(ellipse at 60% 20%, #26221b 0%, #0f0f10 60%, #08080a 100%);
+    color:var(--ink);
+  }
+  .hero__photo{
+    position:absolute; inset:0;
+    background-image:url("assets/photos/two-bikes-bw.jpg");
+    background-size:cover; background-position:center 60%;
+    filter:grayscale(0.6) contrast(1.15) brightness(0.6) sepia(0.12);
+    opacity:.9; transform:translateY(0) scale(1.05); will-change:transform;
+  }
+  .hero__veil{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(8,8,10,.3) 0%, rgba(15,15,16,.7) 55%, rgba(8,8,10,.98) 100%);
+  }
+  .hero__layer{ position:absolute; inset:0; will-change:transform; }
+  .hero__layer svg{ width:100%; height:100%; display:block; }
+  .hero__ridge1{ opacity:.7; }
+  .hero__ridge2{ opacity:.85; }
+
+  /* Top nav */
+  .nav{
+    position:absolute; top:0; left:0; right:0; z-index:5;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:28px 56px;
+  }
+  .nav__brand{ display:flex; flex-direction:column; line-height:1; }
+  .nav__brand-name{ font-family:var(--f-display); letter-spacing:.18em; font-size:20px; color:var(--ink); }
+  .nav__brand-meta{ font-family:var(--f-mono); font-size:10px; letter-spacing:.28em; color:var(--ink2); margin-top:4px; }
+  .nav__links{ display:flex; gap:36px; font-family:var(--f-mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink2); }
+  .nav__links a{ color:var(--ink2); text-decoration:none; transition:color .2s; }
+  .nav__links a:hover{ color:var(--gold); }
+  .nav__cta{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:10px 18px; border:1px solid var(--gold); color:var(--gold);
+    font-family:var(--f-mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+    text-decoration:none; transition:background .2s, color .2s;
+  }
+  .nav__cta:hover{ background:var(--gold); color:var(--bg); }
+  .nav__cta-dot{ width:6px; height:6px; border-radius:50%; background:var(--gold); }
+  .nav__cta:hover .nav__cta-dot{ background:var(--bg); }
+
+  /* Hero copy + badge */
+  .hero__lead{
+    position:absolute; left:56px; right:56px; top:26%; z-index:4;
+    display:flex; gap:64px; align-items:center; justify-content:space-between;
+  }
+  .hero__eyebrow{
+    display:flex; align-items:center; gap:14px; margin-bottom:28px;
+    font-family:var(--f-mono); font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold);
+  }
+  .hero__eyebrow .rule{ width:40px; height:1px; background:var(--gold); display:block; }
+  .hero__title{
+    font-family:var(--f-display);
+    font-size:clamp(96px, 13vw, 220px);
+    line-height:.88; margin:0; color:var(--ink); letter-spacing:-0.01em;
+  }
+  .hero__title .accent{ color:var(--gold); }
+  .hero__badge{ flex-shrink:0; }
+
+  /* Bottom ticker */
+  .ticker{
+    position:absolute; bottom:0; left:0; right:0; z-index:5;
+    border-top:1px solid var(--line);
+    background:rgba(8,8,10,.7); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    padding:18px 56px; display:flex; justify-content:space-between; align-items:center;
+    font-family:var(--f-mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink2);
+  }
+  .ticker .accent{ color:var(--gold); }
+
+  /* SECTIONS --------------------------------------------------------- */
+  .section{ position:relative; padding:160px 56px; border-top:1px solid var(--line); }
+  .section--bg{ background:var(--bg); }
+  .section--bg2{ background:var(--bg2); }
+  .section--dark{ background:#07070a; overflow:hidden; padding:180px 56px; }
+
+  .eyebrow{
+    font-family:var(--f-mono); font-size:11px; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--gold); margin-bottom:24px;
+  }
+
+  /* About */
+  .about__grid{ display:grid; grid-template-columns:1fr 1.4fr; gap:80px; }
+  .about__title{
+    font-family:var(--f-serif); font-weight:400; font-style:italic;
+    font-size:clamp(48px, 5vw, 76px); line-height:1; margin:0; color:var(--ink);
+    letter-spacing:-0.02em;
+  }
+  .about__title .stamp{
+    font-family:var(--f-display); font-style:normal; color:var(--gold); letter-spacing:.02em;
+  }
+  .about__copy{ display:flex; flex-direction:column; gap:28px; }
+  .about__lede{ font-family:var(--f-body); font-size:19px; line-height:1.6; color:var(--ink); margin:0; }
+  .about__body{ font-family:var(--f-body); font-size:16px; line-height:1.7; color:var(--ink2); margin:0; }
+  .about__stats{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+    margin-top:24px; padding-top:36px; border-top:1px solid var(--line);
+  }
+  .stat__num{ font-family:var(--f-display); font-size:56px; line-height:1; color:var(--gold); letter-spacing:-0.01em; }
+  .stat__label{ font-family:var(--f-mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink2); margin-top:8px; }
+
+  /* Gallery */
+  .gallery__head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom:56px; gap:40px;
+  }
+  .gallery__head > :first-child{ flex:1 1 auto; min-width:0; }
+  .gallery__h2{ font-family:var(--f-display); font-size:96px; line-height:.9; margin:0; letter-spacing:-0.01em; }
+  .gallery__h2 .accent{ color:var(--gold); }
+  .gallery__meta{
+    flex:0 0 auto;
+    font-family:var(--f-mono); font-size:11px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--ink2); max-width:280px; text-align:right;
+  }
+  /* Use aspect-ratio on the photo cards instead of fixed 280px rows so the
+     2-row tall card and the four small cards stay in sync at any container
+     width (the source prototype gets away with a fixed 280px row height only
+     because its artboard is locked to 1400px wide). */
+  .gallery__grid{
+    display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px;
+  }
+  .gallery__grid > .ph{ aspect-ratio: 1 / 1; }
+  .gallery__grid > .ph--tall{
+    grid-row:span 2;
+    /* Tall card spans 2 rows + 1 gap of 16px. Width is 2*X (where X is the
+       1fr column width). Height is 2*X + 16px. */
+    aspect-ratio: auto;
+  }
+
+  /* Photo card */
+  .ph{
+    position:relative; width:100%; height:100%;
+    background:#1a1a1d; border:1px solid var(--line); overflow:hidden;
+  }
+  .ph__img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    filter:saturate(0.75) contrast(1.05) brightness(0.85) sepia(0.15);
+  }
+  .ph--bw .ph__img{ filter:grayscale(1) contrast(1.1); }
+  .ph__veil{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(15,15,16,0) 55%, rgba(15,15,16,.75) 100%);
+  }
+  .ph__label{
+    position:absolute; inset:0; display:flex; align-items:flex-end; padding:14px;
+    font-family:var(--f-mono); font-size:10px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--ink);
+  }
+
+  /* Colors / patches */
+  .colors__grid{ display:grid; grid-template-columns:1.15fr 1fr; gap:72px; align-items:center; }
+  .colors__hero{
+    position:relative; aspect-ratio:3/4; border:1px solid var(--line); overflow:hidden;
+  }
+  .colors__hero img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    filter:grayscale(1) contrast(1.08) brightness(0.95);
+  }
+  .colors__hero-veil{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(15,15,16,0) 60%, rgba(15,15,16,.65) 100%);
+  }
+  .colors__hero-meta{
+    position:absolute; left:24px; right:24px; bottom:22px;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    font-family:var(--f-mono); font-size:10px; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--ink2);
+  }
+  .colors__hero-meta .accent{ color:var(--gold); }
+  .colors__h2{
+    font-family:var(--f-display); font-size:clamp(64px, 8vw, 128px);
+    line-height:.88; margin:0 0 32px; letter-spacing:-0.01em;
+  }
+  .colors__h2 .accent{ color:var(--gold); }
+  .colors__p1{ font-family:var(--f-body); font-size:17px; line-height:1.6; color:var(--ink2); max-width:480px; margin:0 0 20px; }
+  .colors__p2{ font-family:var(--f-body); font-size:15px; line-height:1.7; color:var(--mute); max-width:480px; margin:0 0 40px; }
+  .anno{
+    display:grid; grid-template-columns:140px 1fr; gap:28px; align-items:center;
+    border:1px solid var(--line); padding:24px; background:rgba(236,231,223,0.02);
+  }
+  .anno__patch{ position:relative; aspect-ratio:1/1; overflow:hidden; border:1px solid var(--line); }
+  .anno__patch img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(1.1); }
+  .anno__name{ font-family:var(--f-display); font-size:28px; letter-spacing:.06em; color:var(--ink); line-height:1; }
+  .anno__sub{ font-family:var(--f-mono); font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin:8px 0 12px; }
+  .anno__body{ font-family:var(--f-body); font-size:13px; line-height:1.5; color:var(--ink2); }
+
+  /* Membership */
+  .member__grid{ display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+  .member__h2{
+    font-family:var(--f-display); font-size:clamp(64px, 7vw, 112px);
+    line-height:.9; margin:0 0 32px; letter-spacing:-0.01em;
+  }
+  .member__lede{ font-family:var(--f-body); font-size:17px; line-height:1.6; color:var(--ink2); max-width:460px; margin:0; }
+  .card{
+    position:relative; border:1px solid var(--gold); padding:48px 40px;
+    background:linear-gradient(180deg, rgba(201,161,90,0.06), rgba(201,161,90,0));
+  }
+  .card__tag{
+    position:absolute; top:-12px; left:32px; background:var(--bg); padding:0 14px;
+    font-family:var(--f-mono); font-size:10px; letter-spacing:.3em; color:var(--gold);
+  }
+  .card__list{ display:flex; flex-direction:column; gap:18px; margin:0 0 40px; }
+  .card__list li{ display:flex; gap:16px; align-items:baseline; font-family:var(--f-body); font-size:15px; color:var(--ink); line-height:1.5; }
+  .card__list .check{ color:var(--gold); font-family:var(--f-mono); }
+  .card__cta{
+    display:flex; align-items:center; justify-content:space-between; padding:20px 24px;
+    background:var(--gold); color:var(--bg); text-decoration:none;
+    font-family:var(--f-display); font-size:22px; letter-spacing:.14em;
+    transition:filter .2s;
+  }
+  .card__cta:hover{ filter:brightness(1.1); }
+  .card__cta-arrow{ font-family:var(--f-mono); font-size:12px; letter-spacing:.2em; }
+
+  /* Discord */
+  .discord__bg{
+    position:absolute; inset:0; opacity:.06; pointer-events:none;
+    font-family:var(--f-display); font-size:480px; line-height:.8; color:var(--gold);
+    letter-spacing:-0.02em; white-space:nowrap; transform:translateY(-20px);
+  }
+  .discord__inner{ position:relative; text-align:center; }
+  .discord__h2{
+    font-family:var(--f-display); font-size:clamp(80px, 10vw, 180px);
+    line-height:.9; margin:0 0 40px; letter-spacing:-0.02em;
+  }
+  .discord__h2 .accent{ color:var(--gold); }
+  .discord__p{ font-family:var(--f-body); font-size:18px; line-height:1.6; color:var(--ink2); max-width:540px; margin:0 auto 48px; }
+  .discord__cta{
+    display:inline-flex; align-items:center; gap:18px; padding:28px 52px;
+    background:var(--gold); color:var(--bg); text-decoration:none;
+    font-family:var(--f-display); font-size:28px; letter-spacing:.14em;
+    transition:filter .2s;
+  }
+  .discord__cta:hover{ filter:brightness(1.1); }
+
+  /* Footer */
+  .footer{ padding:64px 56px 48px; background:#050506; color:var(--mute); border-top:1px solid var(--line); }
+  .footer__grid{ display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; margin-bottom:64px; }
+  .footer__brand{ display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+  .footer__brand span{ font-family:var(--f-display); letter-spacing:.18em; font-size:18px; color:var(--ink); }
+  .footer__about{ font-family:var(--f-body); font-size:13px; line-height:1.6; color:var(--mute); margin:0; max-width:260px; }
+  .footer__col-title{ font-family:var(--f-mono); font-size:10px; letter-spacing:.3em; color:var(--gold); margin-bottom:18px; }
+  .footer__line{ font-family:var(--f-body); font-size:13px; color:var(--ink2); margin-bottom:8px; }
+  .footer__bottom{
+    display:flex; justify-content:space-between; padding-top:28px; border-top:1px solid var(--line);
+    font-family:var(--f-mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--mute);
+  }
+
+  /* Sticky CTA */
+  .sticky-cta{
+    position:fixed; right:28px; bottom:28px; z-index:50;
+    display:flex; align-items:center; gap:12px; padding:14px 22px;
+    background:var(--gold); color:var(--bg); text-decoration:none;
+    font-family:var(--f-display); font-size:18px; letter-spacing:.14em;
+    box-shadow:0 12px 40px rgba(0,0,0,.6);
+    transition:filter .2s, transform .2s;
+  }
+  .sticky-cta:hover{ filter:brightness(1.1); transform:translateY(-1px); }
+  .sticky-cta__dot{ width:8px; height:8px; border-radius:50%; background:var(--bg); animation:pulseA 2s infinite; }
+  @keyframes pulseA{ 0%,100%{opacity:1} 50%{opacity:.4} }
+
+  /* ----- Responsive trims (the source design is built for 1400px) --- */
+  @media (max-width: 1100px){
+    .nav, .ticker, .section, .section--dark, .footer, .hero__lead{ padding-left:32px; padding-right:32px; }
+    .hero__lead{ left:32px; right:32px; gap:32px; }
+    .nav__links{ display:none; }
+    .about__grid, .colors__grid, .member__grid{ grid-template-columns:1fr; gap:48px; }
+    .gallery__grid{ grid-template-columns:1fr 1fr; }
+    .gallery__grid > .ph{ aspect-ratio: 4 / 3; }
+    .gallery__grid > .ph--tall{ grid-row:span 1; grid-column:span 2; aspect-ratio: 16 / 9; }
+    .footer__grid{ grid-template-columns:1fr 1fr; }
+    .ticker{ flex-wrap:wrap; gap:8px; }
+    .gallery__head{ flex-direction:column; align-items:flex-start; }
+    .gallery__meta{ text-align:left; }
+  }
+
+  @media (max-width: 640px){
+    .nav, .section, .section--dark, .footer{ padding-left:20px; padding-right:20px; }
+    .section, .section--dark{ padding-top:80px; padding-bottom:80px; }
+
+    /* HERO -- on mobile the hero collapses to a vertical stack:
+         nav  →  lead (eyebrow + title + badge)  →  ticker
+       All three live in the document flow so nothing overlaps regardless of
+       how tall the headline gets at small font sizes. */
+    .hero{ height:auto; min-height:0; padding-bottom:0; }
+    .nav{
+      position:relative; padding:20px;
+      flex-wrap:wrap; gap:12px;
+      justify-content:space-between;
+    }
+    .nav__cta{ padding:8px 14px; font-size:10px; }
+    .hero__lead{
+      position:relative; top:auto; left:auto; right:auto;
+      padding:48px 20px 56px;
+      flex-direction:column; align-items:flex-start; gap:40px;
+    }
+    .hero__title{
+      font-size:clamp(64px, 17vw, 96px);
+      line-height:.92;
+    }
+    .hero__eyebrow{ font-size:10px; letter-spacing:.22em; flex-wrap:wrap; }
+    .hero__badge{ align-self:center; }
+    .hero__badge img{ width:200px; height:200px; }
+    .ticker{
+      position:relative; padding:18px 20px;
+      flex-direction:column; align-items:flex-start; gap:10px;
+      font-size:10px;
+    }
+
+    /* Section sizing */
+    .gallery__h2{ font-size:64px; }
+    .colors__grid, .member__grid, .about__grid{ gap:36px; }
+    .colors__hero{ aspect-ratio: 1 / 1; }
+    .member__h2{ margin-bottom:24px; }
+    .stat__num{ font-size:42px; }
+    .about__stats{ gap:16px; }
+
+    /* Card / CTAs */
+    .card{ padding:36px 24px; }
+    .card__cta{ padding:18px 20px; font-size:18px; gap:12px; }
+    .discord__cta{ padding:22px 28px; font-size:20px; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .discord__bg{ font-size:240px; }
+
+    /* Layout */
+    .footer__grid{ grid-template-columns:1fr; gap:32px; }
+    .footer__bottom{ flex-direction:column; gap:8px; align-items:flex-start; }
+    .gallery__grid{ grid-template-columns:1fr; }
+    .gallery__grid > .ph,
+    .gallery__grid > .ph--tall{ grid-row:auto; grid-column:span 1; aspect-ratio: 4 / 3; }
+    .anno{ grid-template-columns:1fr; gap:20px; }
+
+    /* Sticky CTA shouldn't blanket bottom of small screens */
+    .sticky-cta{ right:16px; bottom:16px; padding:12px 18px; font-size:14px; }
+  }
+
+  /* Very narrow phones (≤380px) — squeeze further so nothing breaks */
+  @media (max-width: 380px){
+    .hero__title{ font-size:64px; }
+    .gallery__h2{ font-size:52px; }
+    .stat__num{ font-size:36px; }
+    .nav__brand-meta{ font-size:9px; letter-spacing:.22em; }
+  }
+</style>
 </head>
-
 <body>
-    <div id="mC">
-        <div id="oval"></div>
-        <div id="C">
-            <img src="img/VWRC.svg" width="500" height="500" />
-            <div>
-                <p>Velkommen til vårt klubbhus</p>
-                <a href="https://discord.com/invite/8Q58Z4Xnj3" target="_blank"><img src="img/discord-mark-black.svg" /></a>
-            </div>
-        </div>
-    </div>
-</body>
 
+<!-- HERO -->
+<section class="hero grain" id="top">
+  <div class="hero__photo" data-parallax="0.08"></div>
+  <div class="hero__veil"></div>
+
+  <div class="hero__layer hero__ridge1" data-parallax="0.15">
+    <svg viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="rg1" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#0f0f10" stop-opacity="0"/>
+          <stop offset="1" stop-color="#0f0f10" stop-opacity="1"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,520 L90,470 L180,500 L270,440 L360,470 L450,410 L540,450 L630,390 L720,430 L810,370 L900,410 L990,360 L1080,400 L1170,350 L1260,390 L1350,340 L1440,380 L1440,800 L0,800 Z" fill="#1e1b16"/>
+      <path d="M0,520 L90,470 L180,500 L270,440 L360,470 L450,410 L540,450 L630,390 L720,430 L810,370 L900,410 L990,360 L1080,400 L1170,350 L1260,390 L1350,340 L1440,380 L1440,800 L0,800 Z" fill="url(#rg1)" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <div class="hero__layer hero__ridge2" data-parallax="0.30">
+    <svg viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,620 L120,580 L240,610 L360,560 L480,600 L600,540 L720,590 L840,530 L960,580 L1080,520 L1200,570 L1320,510 L1440,560 L1440,800 L0,800 Z" fill="#100f0d"/>
+    </svg>
+  </div>
+
+  <div class="hero__layer" data-parallax="0.50">
+    <svg viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,760 L1440,760 L1440,800 L0,800 Z" fill="#07070a"/>
+      <path d="M650,760 L720,660 L790,760 Z" fill="#1a1814" opacity=".9"/>
+    </svg>
+  </div>
+
+  <header class="nav">
+    <a href="#top" class="nav__brand" style="text-decoration:none">
+      <span class="nav__brand-name">WAYFARER</span>
+      <span class="nav__brand-meta">VESTFOLD · RC · EST. 2024</span>
+    </a>
+    <nav class="nav__links" aria-label="Hovedmeny">
+      <a href="#om">Om oss</a>
+      <a href="#medlemskap">Medlemskap</a>
+      <a href="#galleri">Galleri</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="#discord" class="nav__cta">
+      <span class="nav__cta-dot"></span>
+      Bli med
+    </a>
+  </header>
+
+  <div class="hero__lead">
+    <div>
+      <div class="hero__eyebrow">
+        <span class="rule"></span>
+        N 59°13′ · E 10°25′ · Vestfold, Norge
+      </div>
+      <h1 class="hero__title">
+        ÅPNE<br/>
+        <span class="accent">VEIER,</span><br/>
+        FELLES KURS.
+      </h1>
+    </div>
+    <div class="hero__badge">
+      <img src="assets/wayfarer-badge.svg" width="320" height="320" alt="Wayfarer Vestfold RC merke"/>
+    </div>
+  </div>
+
+  <div class="ticker">
+    <span>· Som regel 5+ deltagere på tur</span>
+    <span>· Søndagsturer i Vestfold</span>
+    <span>· Discord MC-prat døgnet rundt</span>
+    <a href="#om" class="accent" style="text-decoration:none">↓ Bla ned</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="om" class="section section--bg about grain">
+  <div class="about__grid">
+    <div>
+      <div class="eyebrow">01 — Om klubben</div>
+      <h2 class="about__title">
+        Vi kjører ikke<br/>for å komme fram.<br/>
+        <span class="stamp">VI KJØRER FOR TUREN.</span>
+      </h2>
+    </div>
+    <div class="about__copy">
+      <p class="about__lede">
+        Wayfarer Vestfold RC ble stiftet i 2024 av en håndfull cruiser-entusiaster som ville ha noen å kjøre med uten formaliteter, uten ritualer — bare to hjul, gode veier og folk som forstår hvorfor.
+      </p>
+      <p class="about__body">
+        Vi er mekanikere, lærere, utviklere og pensjonister. Noen kjører Harley, andre Honda eller Triumph. Det vi deler er respekt for maskinene, for hverandre, og for Vestfold som er har mange fine veier å utforske.
+      </p>
+      <div class="about__stats">
+        <div>
+          <div class="stat__num">2024</div>
+          <div class="stat__label">Stiftet</div>
+        </div>
+        <div>
+          <div class="stat__num">~10</div>
+          <div class="stat__label">Aktive medlemmer</div>
+        </div>
+        <div>
+          <div class="stat__num">~1 400</div>
+          <div class="stat__label">Km kjørt</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galleri" class="section section--bg2 gallery grain">
+  <div class="gallery__head">
+    <div>
+      <div class="eyebrow">02 — Fra veien</div>
+      <h2 class="gallery__h2">BILDER,<br/><span class="accent">IKKE ORD.</span></h2>
+    </div>
+    <div class="gallery__meta">Utvalgte øyeblikk fra sesongen 2024 / 2025</div>
+  </div>
+
+  <div class="gallery__grid">
+    <figure class="ph ph--tall">
+      <img class="ph__img" src="assets/photos/group-river.jpg" alt="Pause ved elva på høsttur"/>
+      <div class="ph__veil"></div>
+      <figcaption class="ph__label">Pause ved elva · høsttur</figcaption>
+    </figure>
+    <figure class="ph">
+      <img class="ph__img" src="assets/photos/circle-k.jpg" alt="Samling på Circle K"/>
+      <div class="ph__veil"></div>
+      <figcaption class="ph__label">Circle K · samling</figcaption>
+    </figure>
+    <figure class="ph ph--bw">
+      <img class="ph__img" src="assets/photos/two-bikes-bw.jpg" alt="To stålhester"/>
+      <div class="ph__veil"></div>
+      <figcaption class="ph__label">To stålhester</figcaption>
+    </figure>
+    <figure class="ph">
+      <img class="ph__img" src="assets/photos/two-shadows.jpg" alt="To Honda Shadow"/>
+      <div class="ph__veil"></div>
+      <figcaption class="ph__label">Cruisers × 2</figcaption>
+    </figure>
+    <figure class="ph">
+      <img class="ph__img" src="assets/photos/rider-selfie.jpg" alt="Anno 24 — kutte"/>
+      <div class="ph__veil"></div>
+      <figcaption class="ph__label">Anno 24 · Verdens ende</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- COLORS -->
+<section class="section section--bg colors grain">
+  <div class="colors__grid">
+    <div class="colors__hero">
+      <img src="assets/photos/patch-jacket.jpg" alt="Klubbvest med ryggmerke"/>
+      <div class="colors__hero-veil"></div>
+      <div class="colors__hero-meta">
+        <span>Ryggmerke</span>
+        <span class="accent">Ø 300/250 mm</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="eyebrow">03 — Klubbmerkene</div>
+      <h2 class="colors__h2">BÆR<br/><span class="accent">MERKENE.</span></h2>
+      <p class="colors__p1">
+        Ryggmerket og medlemsmerket tilhører klubben. De er forbeholdt medlemmer som aktivt kjører med oss — som har vært med på turer, delt kaffe på bensinstasjoner, og stilt opp for fellesskapet.
+      </p>
+      <p class="colors__p2">
+        Du ber ikke om å få dem. Du blir tilbudt dem. Velger du å bære dem, gjør du det på dine egne plagg — vest, skinnjakke, eller det du kjører i. Ingen tvang, ingen ritualer.
+      </p>
+
+      <div class="anno">
+        <div class="anno__patch">
+          <img src="assets/photos/patch-anno24.jpg" alt="Anno 24 rocker-stripe"/>
+        </div>
+        <div>
+          <div class="anno__name">ANNO ÅR</div>
+          <div class="anno__sub">Årsmerke · Anno XX</div>
+          <div class="anno__body">
+            Deles ut til aktive kjørere det året de blir medlemmer og viser hvor lenge de har vært med i klubben.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section id="medlemskap" class="section section--bg member grain">
+  <div class="member__grid">
+    <div>
+      <div class="eyebrow">04 — Bli medlem</div>
+      <h2 class="member__h2">DØRA ER<br/>ALLTID ÅPEN.</h2>
+      <p class="member__lede">
+        Vi har ingen prøvetid, ingen rangorden og medlemskapet skapes på veien. Blir du med på tur og kan oppføre deg kan du bli medlem. 
+        <br/><br/>
+      </p>
+      <p class="member__lede">Klubbhuset er på Discord-serveren — kom innom, bli kjent, og kjør med når det passer. Inntil du er med på tur er du hangaround der.</p>
+    </div>
+    <div class="card">
+      <div class="card__tag">/ MEDLEMSKAP</div>
+      <ul class="card__list">
+        <li><span class="check">✓</span>Cruiser, tourer eller custom — alle merker velkomne</li>
+        <li><span class="check">✓</span>Aktiv Discord-server, MC-prat døgnet rundt</li>
+        <li><span class="check">✓</span>Søndagsturer, langturer og helgetreff i sesongen</li>
+        <li><span class="check">✓</span>Erfaring, mekke-tips og hjelpsomme folk</li>
+      </ul>
+      <a href="https://discord.com/invite/8Q58Z4Xnj3" class="card__cta" target="_blank" rel="noopener noreferrer">
+        Wayfarer Vestfold RC Discord
+        <span class="card__cta-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DISCORD -->
+<section id="discord" class="section section--dark discord grain">
+  <div class="discord__bg" aria-hidden="true">DISCORD · DISCORD</div>
+  <div class="discord__inner">
+    <div class="eyebrow">05 — Kom innom</div>
+    <h2 class="discord__h2">CLUBHOUSE<br/><span class="accent">DISCORD</span></h2>
+    <p class="discord__p">
+      Her planlegger vi turer, deler bilder, inspirasjon og snakker tull. Ingen søknad, ingen venting — bare kom og vær med.
+    </p>
+    <a href="https://discord.com/invite/8Q58Z4Xnj3" class="discord__cta" target="_blank" rel="noopener noreferrer">
+      <svg width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true">
+        <path d="M23.7 1.8C21.9 1 20 .4 18 0c-.3.5-.6 1.1-.8 1.7-2.1-.3-4.2-.3-6.3 0C10.6 1.1 10.3.5 10 0 8 .4 6.1 1 4.3 1.8 1.2 6.6.3 11.3.8 15.9c2.2 1.7 4.4 2.7 6.5 3.3.5-.7 1-1.5 1.4-2.3-.8-.3-1.5-.7-2.3-1.1.2-.1.4-.3.6-.4 4.3 2 9 2 13.2 0 .2.1.4.3.6.4-.7.4-1.5.8-2.3 1.1.4.8.9 1.6 1.4 2.3 2.1-.6 4.3-1.6 6.5-3.3.5-5.3-.9-10-3.2-14.1zM9.5 13.1c-1.3 0-2.3-1.2-2.3-2.6 0-1.5 1-2.7 2.3-2.7 1.3 0 2.3 1.2 2.3 2.7 0 1.4-1 2.6-2.3 2.6zm8.9 0c-1.3 0-2.3-1.2-2.3-2.6 0-1.5 1-2.7 2.3-2.7 1.3 0 2.3 1.2 2.3 2.7 0 1.4-1 2.6-2.3 2.6z"/>
+      </svg>
+      Wayfarer Vestfold RC Discord
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontakt" class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__brand">
+        <img src="assets/wayfarer-badge.svg" width="32" height="32" alt=""/>
+        <span>WAYFARER</span>
+      </div>
+      <p class="footer__about">Cruiser-klubben fra Vestfold. Stiftet 2024. Vi møtes på Discord.</p>
+    </div>
+    <div>
+      
+    </div>
+    <div>
+    </div>
+    <div>
+      <div class="footer__col-title">SNARVEIER</div>
+      <div class="footer__line"><a href="#om">Om oss</a></div>
+      <div class="footer__line"><a href="#medlemskap">Medlemskap</a></div>
+      <div class="footer__line"><a href="#colors">Klubbmerkene</a></div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 Wayfarer Vestfold RC · Ride safe</span>
+    <span>N 59°16′ E 10°25′</span>
+  </div>
+</footer>
+
+<!-- <a href="https://discord.com/invite/8Q58Z4Xnj3" class="sticky-cta" aria-label="Bli med i Discord" target="_blank" rel="noopener noreferrer">
+  <span class="sticky-cta__dot"></span>
+  Wayfarer Vestfold RC Discord
+</a> -->
+
+<script>
+  // Hero parallax — translates each [data-parallax] layer by scrollY * factor.
+  // The original prototype scrolled inside a "design canvas" container; the
+  // production page uses the window scroll instead.
+  (function(){
+    const layers = Array.from(document.querySelectorAll('[data-parallax]'));
+    if(!layers.length) return;
+
+    let ticking = false;
+    function update(){
+      const y = window.scrollY || window.pageYOffset || 0;
+      for(const el of layers){
+        const factor = parseFloat(el.dataset.parallax) || 0;
+        const scale = el.classList.contains('hero__photo') ? ' scale(1.05)' : '';
+        el.style.transform = 'translateY(' + (y * factor).toFixed(2) + 'px)' + scale;
+      }
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive:true });
+    update();
+  })();
+</script>
+</body>
 </html>
